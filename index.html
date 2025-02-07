@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Color RGB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #fce4ec;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .color-display {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #d81b60;
+        }
+        h1 {
+            color: #d81b60;
+        }
+        label {
+            font-weight: bold;
+            color: #880e4f;
+        }
+        input[type="number"] {
+            border: 2px solid #d81b60;
+            border-radius: 5px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            background: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Selector de Color RGB</h1>
+        <div class="color-display mt-3" id="colorDisplay"></div>
+        <p class="text-center mt-2" id="hexCode">#000000</p>
+        
+        <div class="mt-4">
+            <label for="redRange" class="form-label">Rojo</label>
+            <input type="range" class="form-range" id="redRange" min="0" max="255" value="0">
+            <input type="number" class="form-control" id="redInput" min="0" max="255" value="0">
+        </div>
+        <div>
+            <label for="greenRange" class="form-label">Verde</label>
+            <input type="range" class="form-range" id="greenRange" min="0" max="255" value="0">
+            <input type="number" class="form-control" id="greenInput" min="0" max="255" value="0">
+        </div>
+        <div>
+            <label for="blueRange" class="form-label">Azul</label>
+            <input type="range" class="form-range" id="blueRange" min="0" max="255" value="0">
+            <input type="number" class="form-control" id="blueInput" min="0" max="255" value="0">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
